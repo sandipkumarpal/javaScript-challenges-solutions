@@ -8,7 +8,49 @@ document.getElementById("app").innerHTML = `
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-  return "Let's Start";
+  // return "Let's Start";
+
+  // 1 Example
+  // const convertStrToArray = str.split("");
+  // const reverseArray = convertStrToArray.reverse((text) => text);
+  // const convertArrayToStr = reverseArray.join("");
+  // return convertArrayToStr;
+
+  // 2 Example
+  // let reverseStr = "";
+  // const strLength = str.length;
+  // for (let index = strLength; index >= 0; index--) {
+  //   if (index < strLength) reverseStr = reverseStr + str[index];
+  // }
+  // return reverseStr;
+
+  // 3 Example
+  // let reverseStr = "";
+  // const strLength = str.length;
+  // for (let index = 0; index < strLength; index++) {
+  //   reverseStr = str[index] + reverseStr;
+  // }
+  // return reverseStr;
+
+  // 4 Example
+  // let reverseStr = "";
+  // for (let character of str) {
+  //   reverseStr = character + reverseStr;
+  // }
+  // return reverseStr;
+
+  // 5 Example
+  // let reverseStr = "";
+  // str.split("").forEach((string) => {
+  //   reverseStr = string + reverseStr;
+  // });
+  // return reverseStr;
+
+  // 6 Example
+  let reverseStr = str.split("").reduce((revCharacter, character) => {
+    return (revCharacter = character + revCharacter);
+  }, "");
+  return reverseStr;
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
