@@ -9,13 +9,11 @@ document.getElementById("app").innerHTML = `
 
 function reverseString(str) {
   // return "Let's Start";
-
   // 1 Example
   // const convertStrToArray = str.split("");
   // const reverseArray = convertStrToArray.reverse((text) => text);
   // const convertArrayToStr = reverseArray.join("");
   // return convertArrayToStr;
-
   // 2 Example
   // let reverseStr = "";
   // const strLength = str.length;
@@ -23,7 +21,6 @@ function reverseString(str) {
   //   if (index < strLength) reverseStr = reverseStr + str[index];
   // }
   // return reverseStr;
-
   // 3 Example
   // let reverseStr = "";
   // const strLength = str.length;
@@ -31,33 +28,34 @@ function reverseString(str) {
   //   reverseStr = str[index] + reverseStr;
   // }
   // return reverseStr;
-
   // 4 Example
   // let reverseStr = "";
   // for (let character of str) {
   //   reverseStr = character + reverseStr;
   // }
   // return reverseStr;
-
   // 5 Example
   // let reverseStr = "";
   // str.split("").forEach((string) => {
   //   reverseStr = string + reverseStr;
   // });
   // return reverseStr;
-
   // 6 Example
-  let reverseStr = str.split("").reduce((revCharacter, character) => {
-    return (revCharacter = character + revCharacter);
-  }, "");
-  return reverseStr;
+  // let reverseStr = str.split("").reduce((revCharacter, character) => {
+  //   return (revCharacter = character + revCharacter);
+  // }, "");
+  // return reverseStr;
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
 // Return true if palindrome and false if not
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+  // 1 Example
+  const reverseStr = str.split("").reverse().join("");
+  return str === reverseStr;
+}
 
 // CHALLENGE 3: REVERSE AN INTEGER
 // Return an integer in reverse
@@ -80,6 +78,6 @@ function maxCharacter(str) {}
 function fizzBuzz() {}
 
 // Call Function
-const output = reverseString("hello");
+const output = isPalindrome("racecar");
 
-console.log(output);
+console.log("racecar: isPalindrome", output);
